@@ -1,9 +1,9 @@
 public class Basic_Linked_List {
     Node head;
 
-    public void insert(int data) {
+    public void insert(int element) {
         Node node = new Node();
-        node.data = data;
+        node.element = element;
         node.next = null;
 
         if (head == null) {
@@ -22,9 +22,10 @@ public class Basic_Linked_List {
 
         Node node = head;
         while (node.next != null) {
-            System.out.println(node.data);
+            System.out.println(node.element);
             node = node.next;
         }
+        System.out.println(node.element);
     }
 
 }
