@@ -10,7 +10,7 @@ public class Basic_Linked_List {
             head = node;
         } else {
             Node n = head;
-            while (n.next != null) {
+            while (n.next != null) { // as long as the pointer to the next node is not null, keep looping
                 n = n.next;
             }
             n.next = node;
