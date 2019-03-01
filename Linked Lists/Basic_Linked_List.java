@@ -25,7 +25,7 @@ public class Basic_Linked_List {
             System.out.println(node.element);
             node = node.next;
         }
-        System.out.println(node.element);
+        System.out.println(node.element); // printing the last element after the loop
     }
 
 }
