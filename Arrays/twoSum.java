@@ -8,15 +8,16 @@ class Solution {
             for (int j = 0; j < len; j++) {
 
                 if (j == i) {
+
                     j++;
                     if (i == len - 1) {
-                        j--;
+                        break;
                     }
+                }
 
-                    if (nums[i] + nums[j] == target) {
-                        ans[0] = i;
-                        ans[1] = j;
-                    }
+                if (nums[i] + nums[j] == target) {
+                    ans[0] = i;
+                    ans[1] = j;
 
                 }
 
