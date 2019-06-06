@@ -13,11 +13,19 @@ class Solution {
         
             int length=Integer.toString(x).length();
 
-            for(int i=0;i<length;i++)
+            while(x!=0)
             {
-                ans = ans*10;
-                ans = ans + x%10;
+                int temp = x%10;
                 x = x/10;
+        if (ans > Integer.MAX_VALUE/10||ans ==Integer.MAX_VALUE/10 && temp >7) 
+        {
+            return 0;
+        }
+        if (ans < Integer.MIN_VALUE/10||ans ==Integer.MIN_VALUE/10 && temp<-8) 
+        {return 0;
+        }
+                                ans = ans*10 +temp;
+
             }
     
             if(sign)
@@ -26,14 +34,7 @@ class Solution {
             }
 
 
-         if (ans > Integer.MAX_VALUE/10||ans ==Integer.MAX_VALUE/10) 
-        {
-            ans = 0;
-        }
-        if (ans < Integer.MIN_VALUE/10||ans ==Integer.MIN_VALUE/10) 
-        {
-            ans = 0;
-        }
+
         
             
         
