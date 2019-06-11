@@ -2,8 +2,6 @@ class Solution {
     public int reverse(int x) {
         boolean sign = false;
         int ans=0;
-
- 
             if(x<0)
             {
                  sign = true;
