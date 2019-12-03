@@ -20,23 +20,30 @@ Edge Cases:
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
         if head == None:
-            return None
+            return head
         if head.next == None:
             return head
         anss = current = head
         nextll = current.next
        
-        while current:
+        while nextll!=None:
             if(current.val == nextll.val):
                 current.next = nextll.next
+                print(nextll)
+                
                 nextll = nextll.next
                 print(current)
                 print(nextll)
-            current = current.next
-            if(nextll):
-                if nextll.next:
-                    nextll = nextll.next
-        if(anss.next): 
-            if(anss == anss.next.val):
-                anss.next = None
-        return anss
+            else:
+               # if(current):
+                 
+                current = current.next
+                #if(nextll):
+                   
+                nextll = nextll.next
+
+        #if(anss.next):
+        #    if(anss.val == anss.next.val):
+        #        anss.next = None
+        
+        return head
