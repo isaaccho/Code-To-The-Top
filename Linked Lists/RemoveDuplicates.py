@@ -29,11 +29,10 @@ class Solution:
         while nextll!=None:
             if(current.val == nextll.val):
                 current.next = nextll.next
-                print(nextll)
+           
                 
                 nextll = nextll.next
-                print(current)
-                print(nextll)
+           
             else:
                # if(current):
                  
