@@ -7,24 +7,15 @@
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
         if(head):
+            curr = head.next
             steady = head.next
-            current = head.next
-            final = head
-            final.next = None
-        
-       
-       # current = current.next
-
-        #print(current)
-        #while(current.next!=None):   
-        # current = current.next
+            prev = head
+            prev.next = None
+            
             while(steady):
                 steady = steady.next
-                current.next = final
-                #steady = steady.next
-                final = current
-                current = steady
-        
-        
-            return final
-        
+                curr.next = prev
+                prev = curr
+                curr = steady
+            
+            return prev
