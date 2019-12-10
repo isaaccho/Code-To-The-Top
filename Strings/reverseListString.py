@@ -4,6 +4,7 @@ class Solution:
         Do not return anything, modify s in-place instead.
         """
         
+        
         #object.reverse() does the job of reversing the list in python
         s.reverse()
         
