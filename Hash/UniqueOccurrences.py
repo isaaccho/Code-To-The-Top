@@ -3,9 +3,13 @@ class Solution:
         from collections import Counter
         
         ctr = Counter(arr)
+        check = ctr.values()
         
-        for keys in ctr:
-            if ctr.get(keys) in keys:
-                return false
-            
-        return true
+        
+        #checks if there are any duplicates in the list
+        if len(check) == len(set(check)):
+            return True
+           
+        else:
+            return False
+        
